@@ -27,6 +27,11 @@ CREATE TABLE MovieGenre(
         genre varchar(20)
         );
 
+CREATE TABLE MovieDirector(
+        mid int,
+        did int
+        );
+
 CREATE TABLE MovieActor(
         mid int,
         aid int,
@@ -49,4 +54,4 @@ CREATE TABLE MaxMovieID(
         id int
         );
 
-# DROP TABLE IF EXISTS Movie, Actor, Director, MovieGenre, Review, MovieActor, MaxPersonID, MaxMovieID;
+# DROP TABLE IF EXISTS Movie, Actor, Director, MovieGenre, MovieDirector, Review, MovieActor, MaxPersonID, MaxMovieID;
