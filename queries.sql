@@ -23,4 +23,4 @@ FROM MovieGenre
 JOIN MovieActor
 ON MovieActor.mid = MovieGenre.mid
 GROUP BY MovieActor.aid
-HAVING count(DISTINCT MovieGenre.genre > 1)
+HAVING count(DISTINCT MovieGenre.genre > 1);
