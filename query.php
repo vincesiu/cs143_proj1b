@@ -47,7 +47,7 @@
 		$query = $_GET["query"];
 		
 		// instantiating database connection
-		$mysqli = new mysqli('localhost', 'cs143', '', 'TEST');
+		$mysqli = new mysqli('localhost', 'cs143', '', 'CS143');
 		
 		// check for error
 		if($mysqli->connect_errno > 0){
