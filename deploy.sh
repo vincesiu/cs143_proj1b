@@ -1,4 +1,4 @@
-#!/bin/bash -ue
+#!/bin/bash -e
 
 #########################################
 # INIT
@@ -38,5 +38,3 @@ if [[ "$1" == '--submit' ]]; then
     rm -rf 904280752
     source <(curl -sL ${SCRIPT_URL}) 904280752
 fi
-
-

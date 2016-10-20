@@ -84,6 +84,3 @@ CREATE TABLE Review(
         ) ENGINE=InnoDB;
 -- Constraints:
 -- The mid must refer to an id in the Movie table.
-
-
-# DROP TABLE IF EXISTS Movie, Actor, Director, MovieGenre, MovieDirector, Review, MovieActor, MaxPersonID, MaxMovieID;
