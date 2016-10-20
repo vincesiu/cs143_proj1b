@@ -13,11 +13,11 @@ CREATE TABLE Movie(
         rating varchar(10),
         company varchar(50),
         PRIMARY KEY(id),
-        CHECK(id < ALL (SELECT id FROM MaxPersonID))
+        CHECK(id < ALL (SELECT id FROM MaxMovieID))
         ) ENGINE=InnoDB;
 -- Constraints:
 -- The id for a row in movie must not be null, and must be unique.
--- the id must be less than the max person id from MaxPersonID
+-- the id must be less than the max person id from MaxMovieID
 
 CREATE TABLE Actor(
         id int NOT NULL,
@@ -39,11 +39,11 @@ CREATE TABLE Director(
         dob date,
         dod date,
         PRIMARY KEY(id),
-        CHECK(id < ALL (SELECT id FROM MaxMovieID))
+        CHECK(id < ALL (SELECT id FROM MaxPersonID))
         ) ENGINE=InnoDB;
 -- Constraints:
 -- The id for a row in Director must not be null, and must be unique.
--- the id must be less than the max person id from MaxMovieID
+-- the id must be less than the max person id from MaxPersonID
 
 CREATE TABLE MovieGenre(
         mid int NOT NULL,
