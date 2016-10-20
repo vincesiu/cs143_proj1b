@@ -29,6 +29,8 @@ trap cleanup EXIT
 
 echo "Running deploy script..."
 
+rsync -a ./query.php ~/www/query.php
+
 if [[ "$1" == '--submit' ]]; then
     mkdir 904280752
     cp ${REQUIRED_FILES[@]} 904280752
