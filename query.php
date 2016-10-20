@@ -51,7 +51,7 @@
 		
 		// check for error
 		if($mysqli->connect_errno > 0){
-		    die('Unable to connect to database [' . $db->connect_error . ']');
+		    die('Unable to connect to database [' . $mysqli->connect_error . ']');
 		}
 
 		// perform query
