@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash -xue
 
-echo "DROP TABLE IF EXISTS Movie, Actor, Director, MovieDirector, MovieGenre, Review, MovieActor, MaxPersonID, MaxMovieID" | mysql TEST
+echo "DROP TABLE IF EXISTS MovieDirector, MovieGenre, Review, MovieActor, MaxPersonID, MaxMovieID, Movie, Actor, Director"  | mysql TEST
 
 mysql TEST < create.sql
 mysql TEST < load.sql
