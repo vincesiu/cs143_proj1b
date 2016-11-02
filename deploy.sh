@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 #########################################
 # INIT
@@ -36,5 +36,9 @@ if [[ "$1" == '--submit' ]]; then
     cp ${REQUIRED_FILES[@]} 904280752
     zip -r ${ZIP_NAME} 904280752/
     rm -rf 904280752
-    source <(curl -sL ${SCRIPT_URL}) 904280752
+#    curl -sL ${SCRIPT_URL} | bash 904280752
+    bash <(curl -sL ${SCRIPT_URL}) 904280752
+    if [[ $? -eq 0 ]]; then
+        cp ${ZIP_NAME} ~/www/ 
+    fi
 fi
